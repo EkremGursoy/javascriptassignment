@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Rainydays</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+  <!--favicon-->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png" />
+</head>
+
+<body>
+  <!--navbar-->
+  <div class="page">
+    <header>
+      <div class="up">
+        
+        <a id="image" href="index.html"> 
+          <img src="assets/Logo/Logorainyday.png">
+        </a>
+      
+      <input type="checkbox" id="toggle">
+      <label class="hamburger-icon" for="toggle"><i class="fas fa-bars"></i></label>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">WOMAN</a></li>
+          <li><a href="index.html">MAN</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="shoppingcart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+      </nav>
+      
+      </div>
+      </header>
+      
+
+    <div class="firstrow">
+      <div class="mybag">
+        <h1>1.MY BAG</h1>
+        <div id="my-bag">
+          
+        </div>
+      </div>
+      <div class="mybaglist"></div>
+      <div class="payment">
+        <h1>2.PAYMENT METHOD</h1>
+        <hr>
+        <h3>Choose payment</h3>
+        <input type="radio" name="paychoice" value="PayPal">PayPal*
+        <br>
+        <input type="radio" name="paychoice" value="Klarna">Klarna*
+        <br>
+        <input type="radio" name="paychoice" value="Visa">Visa*
+        <br>
+        <input type="radio" name="paychoice" value="Mastercard">Mastercard*
+        <br><br>
+        <h3>Credit Card</h3>
+        <h4>Card number*</h4>
+        <input type="text" name="cardnumber" class="cardno">
+        <div class="card-details">
+          <div>
+            <h4>Expiration Date*</h4>
+            <input type="text" name="date">
+          </div>
+          <div>
+            <h4>CVV*</h4>
+            <input type="text" name="cvv">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="secondrow">
+      <div class="shipping">
+        <h1>SHIPPING INFORMATION</h1>
+        <hr>
+        <h3>Email</h3>
+        <input type="email" name="email">
+        <h3>Phone</h3>
+        <input type="tel" name="phone">
+        <br>
+        <h2>Delivery Adresse</h2>
+        <br>
+        <h3>First Name*</h3>
+        <input type="text" name="name">
+        <h3>Last Name*</h3>
+        <input type="text" name="lastname">
+        <h3>Street Adresse*</h3>
+        <input type="text" name="Streetadress">
+        <div class="card-details">
+          <div>
+            <h3>Post Code*</h3>
+            <input type="text" name="postcode">
+          </div>
+          <div>
+            <h3>City*</h3>
+            <input type="text" name="city">
+          </div>
+        </div>
+        <h3>Country*</h3>
+        <input type="text" name="Country">
+      </div>
+
+      <div class="total">
+        <h1>4.TOTAL</h1>
+        <hr>
+        <br><br>
+        <div class="lane1">
+          <div>
+            <h3>Sub-total</h3>
+            <h3>Delivery</h3>
+          </div>
+          <div>
+            <span id="total-price">$0.00</span>
+            <h3>FREE</h3>
+          </div>
+        </div>
+        <hr>
+        <br>
+        <a href="shoppingsucsess.html"><button class="check">Check Out</button></a>
+      </div>
+    </div>
+
+    <footer class="sectionarea">
+      <div class="container">
+        <div class="footeritem">
+          <a id="imagedown" href="#">
+            <img src="assets/Logo/Logorainyday.png">
+          </a>
+        </div>
+        <div class="footeritem">
+          <h3>STORES</h3>
+          <ul class="footerlinks">
+            <li>PARIS</li>
+            <li>TOKYO</li>
+            <li>OSLO</li>
+            <li>BERGEN</li>
+          </ul>
+        </div>
+        <div class="footeritem">
+          <h3>FOLLOW US</h3>
+          <ul class="footerlinks">
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          </ul>
+        </div>
+        <div class="footeritem">
+          <h3>PAYMENT OPTIONS</h3>
+          <ul class="footerlinks">
+            <li><a href="#"><i class="fa-brands fa-paypal"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-cc-visa"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-cc-mastercard"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-cc-mastercard"></i></a></li>
+          </ul>
+        </div>
+        <div class="footeritem">
+          <h3>WE SHIP WITH</h3>
+          <ul class="footerlinks">
+            <li><a href="#"><i class="fa-brands fa-dhl"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-dhl"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-ups"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-ups"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="separate">
+      <h3 class="bottomtext">@RAINYDAYS 2024</h3>   
+    </footer>
+  </div>
+  <script src="src/js/main.js"></script>
+</body>
+
+</html>
