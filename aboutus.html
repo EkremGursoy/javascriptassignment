@@ -4,120 +4,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="src/css/modal.css">
+  <link rel="stylesheet" href="src/css/layout.css">
+  <link rel="stylesheet" href="src/css/styles.css">
   <title>Rainydays</title>
- <!--favicon-->
- <link rel="icon" type="image/png" sizes="32x32" href="../javascriptassignment/assets/favicon_io/favicon.ico" />  <link rel="stylesheet" href="src/css/styles.css">
-
- 
+  <link rel="icon" type="image/png" sizes="32x32" href="../javascriptassignment/assets/favicon_io/favicon.ico" />
 </head>
 
 <body>
- 
-
-<div class="page"> 
-  <header>
-    <div class="up">
-      
-      <a id="image" href="index.html"> 
-        <img src="assets/Logo/Logorainyday.png">
-      </a>
-    
-    <input type="checkbox" id="toggle">
-    <label class="hamburger-icon" for="toggle"><i class="fas fa-bars"></i></label>
-    <nav>
-      <ul id="menu">
-        <li><a href="index.html">WOMAN</a></li>
-        <li><a href="index.html">MAN</a></li>
-        <li><a href="aboutus.html">ABOUT US</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-        <li><a href="shoppingcart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
-      </ul>
-    </nav>
-    
+  <!-- Mobile menu modal -->
+  <div id="mobile-menu-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="index.html#woman">WOMAN</a></li>
+          <li><a href="index.html#man">MAN</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="shoppingcart.html"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+      </nav>
     </div>
-    </header>
-    
-<br><br><br><br>
-  <div id="aboutusimg">
-    <img src="assets/images/aboutus.png">
   </div>
-  
-  <div id="Aboutus">
-    <h1>OUR HISTORY</h1>
-    <hr class="line">
-    
-    <h3>13 years ago, our paths crossed. We decided to focus our energy on one simple idea:</h3>
-    <h3> The raincoat.</h3>
-    <br>
-    <h3> 100% waterproof. Breathable. Recycled. And stylish.</h3>
-    <h3> Living in Bergen, the rainiest city of Europe where it rains 2 out of 3 days, calls for drastic sartorial decisions. We made the call. </h3> 
-    <br>  
-    <h3> Based on traditional tailoring techniques, ‘Japanese sensibilities’ and high tech innovative solutions, we birthed Norwegian Rain.  </h3>
-    <br>
-    <h3> We’ve thought about everything, so you don’t have to. Your decision is solely to choose your award winning raincoat based on the style that closely reflects your state of mind.</h3>
-    <br><br><br>
 
-    <h4 class="midtext">A sartorial take on 100% waterproof outerwear inspired by Japanese sensibility & life in the rainiest city of Europe – Bergen.</h4>
-    <h3>“Ever since embarking on this Norwegian Rain journey and even before that – Alexander and I have always had this affinity towards Japan. It was poetic and very fitting that our first ever order was from a major shop in Tokyo! Of whom we might add is still stocking Norwegian Rain”.
-      <br><br>
-
-    Founder and creative director born and raised in Bergen, a city on the west coast of Norway known for its heavy rain, underground music scene and the encapsulating 7 mountains that bring wild nature all the way into the city streets. Living in Bergen means a life in rain. You can hate it or love it, but no matter how you approach it, one thing is certain: It will rain tomorrow. Or the day after. 2 out of 3 days.
-    <br><br>
-    Drop by drop, the rain project evolved into an award winning label. Now available through their 4 flagships in Paris, Tokyo, Oslo and Bergen and in 12 countries through carefully selected multi-brand stores.
-    <br><br>
-    *”DUGNAD” IS AN OLD NORWEGIAN TERM FOR PEOPLE GETTING TOGETHER AND VOLUNTARILY WORKING TOWARDS A COMMON GOAL THAT BENEFITS THE COMMUNITY, NEIGHBOURHOOD OR AN INDIVIDUAL  </h3>
-<hr class="line">
-</div>
-  <br><br><br><br><br><br>
-    <footer class="sectionarea">
-    <div class="container">
-    <div class="footeritem">
-        <a id="imagedown" href="#"> 
-        <img src="assets/Logo/Logorainyday.png">
+  <div class="page">
+    <header>
+      <div class="up">
+        <a id="image" href="index.html">
+          <img src="assets/Logo/Logorainyday.png">
         </a>
-</div>
-    <div class="footeritem">
-        <h3>STORES</h3>
-        <ul class="footerlinks">
-        <li>PARIS</li>
-        <li>TOKYO</li>
-        <li>OSLO</li>
-        <li>BERGEN</li>
-</ul>
-</div>
-    <div class="footeritem">
-        <h3>FOLLOW US</h3>
-    <ul class="footerlinks">  
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
- </ul>
-</div>
-    <div class="footeritem">
-        <h3>PAYMENT OPTIONS</h3>
-        <ul class="footerlinks">  
-        <li><a href="#"><i class="fa-brands fa-paypal"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-cc-visa"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-cc-mastercard"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-cc-mastercard"></i></a></li>
-</ul>
-</div>
-                            
+        <nav id="menu">
+          <ul>
+            <li><a href="index.html#woman">WOMAN</a></li>
+            <li><a href="index.html#man">MAN</a></li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="shoppingcart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
+          </ul>
+        </nav>
+        <button id="hamburger-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
 
-<div class="footeritem">
-       <h3>WE SHIP WITH</h3>
-       <ul class="footerlinks">
-       <li><a href="#"><i class="fa-brands fa-dhl"></i></a></li>
-       <li><a href="#"><i class="fa-brands fa-dhl"></i></a></li>
-       <li><a href="#"><i class="fa-brands fa-ups"></i></a></li>
-       <li><a href="#"><i class="fa-brands fa-ups"></i></a></li>
-</ul>                                                                                                                                              
-</div>
-</div>
-    <hr class="separate">  
-    <h3 class="bottomtext">@RAINYDAYS 2024</h3>                    
-</footer>
-</div>
+    <br><br><br><br>
+    <div id="aboutusimg">
+      <img src="assets/images/aboutus.png">
+    </div>
+
+    <div id="Aboutus">
+      <h1>OUR HISTORY</h1>
+      <hr class="line">
+
+      <h3>13 years ago, our paths crossed. We decided to focus our energy on one simple idea:</h3>
+      <h3> The raincoat.</h3>
+      <br>
+      <h3> 100% waterproof. Breathable. Recycled. And stylish.</h3>
+      <h3> Living in Bergen, the rainiest city of Europe where it rains 2 out of 3 days, calls for drastic sartorial
+        decisions. We made the call. </h3>
+      <br>
+      <h3> Based on traditional tailoring techniques, ‘Japanese sensibilities’ and high tech innovative solutions, we
+        birthed Norwegian Rain. </h3>
+      <br>
+      <h3> We’ve thought about everything, so you don’t have to. Your decision is solely to choose your award winning
+        raincoat based on the style that closely reflects your state of mind.</h3>
+      <br><br><br>
+
+      <h4 class="midtext">A sartorial take on 100% waterproof outerwear inspired by Japanese sensibility & life in the
+        rainiest city of Europe – Bergen.</h4>
+      <h3>“Ever since embarking on this Norwegian Rain journey and even before that – Alexander and I have always had
+        this affinity towards Japan. It was poetic and very fitting that our first ever order was from a major shop in
+        Tokyo! Of whom we might add is still stocking Norwegian Rain”.
+        <br><br>
+
+        Founder and creative director born and raised in Bergen, a city on the west coast of Norway known for its heavy
+        rain, underground music scene and the encapsulating 7 mountains that bring wild nature all the way into the city
+        streets. Living in Bergen means a life in rain. You can hate it or love it, but no matter how you approach it,
+        one thing is certain: It will rain tomorrow. Or the day after. 2 out of 3 days.
+        <br><br>
+        Drop by drop, the rain project evolved into an award winning label. Now available through their 4 flagships in
+        Paris, Tokyo, Oslo and Bergen and in 12 countries through carefully selected multi-brand stores.
+        <br><br>
+        *”DUGNAD” IS AN OLD NORWEGIAN TERM FOR PEOPLE GETTING TOGETHER AND VOLUNTARILY WORKING TOWARDS A COMMON GOAL
+        THAT BENEFITS THE COMMUNITY, NEIGHBOURHOOD OR AN INDIVIDUAL
+      </h3>
+      <hr class="line">
+    </div>
+    <br><br><br><br><br><br>
+    <footer class="sectionarea">
+      <div class="container">
+        <div class="footeritem">
+          <a id="imagedown" href="#">
+            <img src="assets/Logo/Logorainyday.png">
+          </a>
+        </div>
+        <div class="footeritem">
+          <h3>STORES</h3>
+          <ul class="footerlinks">
+            <li>PARIS</li>
+            <li>TOKYO</li>
+            <li>OSLO</li>
+            <li>BERGEN</li>
+          </ul>
+        </div>
+        <div class="footeritem">
+          <h3>FOLLOW US</h3>
+          <ul class="footerlinks">
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          </ul>
+        </div>
+        <div class="footeritem">
+          <h3>PAYMENT OPTIONS</h3>
+          <ul class="footerlinks">
+            <li><a href="#"><i class="fa-brands fa-paypal"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-cc-visa"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-cc-mastercard"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-cc-mastercard"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="footeritem">
+          <h3>WE SHIP WITH</h3>
+          <ul class="footerlinks">
+            <li><a href="#"><i class="fa-brands fa-dhl"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-dhl"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-ups"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-ups"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="separate">
+      <h3 class="bottomtext">@RAINYDAYS 2024</h3>
+    </footer>
+  </div>
+  <script src="src/js/main.js" type="module"></script>
+  <script src="src/js/handleModal.js" type="module"></script>
 </body>
+
 </html>
