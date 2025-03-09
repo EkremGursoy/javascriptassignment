@@ -61,11 +61,14 @@
         <div id="green">
           <h4 id="product-text"></h4>
           <img id="product-image" src="" alt="Product Image">
+          <p id="product-price"></p>
+          <button id="add-to-cart-button" class="addtocart">ADD TO CART</button>
         </div>
         <br>
         <div class="black">
           <div class="pink">
             <h4>ABOUT THE PRODUCT</h4>
+            <p id="product-description"></p>
             <ul>
               <li>The Concept jacket is a flexible and warm jacket with a hood, perfect for skiing or other outdoor
                 activities.</li>
@@ -103,11 +106,6 @@
     <footer class="sectionarea">
       <div class="container">
         <div class="footeritem">
-          <a id="imagedown" href="#">
-            <img src="assets/Logo/Logorainyday.png">
-          </a>
-        </div>
-        <div class="footeritem">
           <h3>STORES</h3>
           <ul class="footerlinks">
             <li>PARIS</li>
@@ -130,15 +128,13 @@
             <li><a href="#"><i class="fa-brands fa-paypal"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-cc-visa"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-cc-mastercard"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-cc-mastercard"></i></a></li>
           </ul>
         </div>
+
         <div class="footeritem">
           <h3>WE SHIP WITH</h3>
           <ul class="footerlinks">
             <li><a href="#"><i class="fa-brands fa-dhl"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-dhl"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-ups"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-ups"></i></a></li>
           </ul>
         </div>
@@ -149,19 +145,79 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Get the product ID from URL parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id');
 
-      if (selectedProduct) {
-        if (selectedProduct.imgUrl) {
-          document.getElementById('product-image').src = selectedProduct.imgUrl;
-          document.getElementById('product-text').textContent = selectedProduct.title;
-          document.getElementById('product-price').textContent = `$${selectedProduct.price}`;
-        } else {
-          console.error("Cant found the item.");
+      if (!productId) {
+        console.error("No product ID found in URL");
+        return;
+      }
+
+      try {
+        // Fetch the specific product data from API
+        const apiUrl = `https://v2.api.noroff.dev/rainy-days/${productId}`;
+        const response = await fetch(apiUrl);
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
         }
+
+        const data = await response.json();
+        const product = data.data;
+
+        // Populate the product page with fetched data
+        document.getElementById('product-text').textContent = product.title;
+        document.getElementById('product-image').src = product.image.url;
+        document.getElementById('product-image').alt = product.image.alt;
+        document.getElementById('product-price').textContent = `$${product.price.toFixed(2)}`;
+
+        // If a description exists, add it
+        if (product.description) {
+          document.getElementById('product-description').textContent = product.description;
+        }
+
+        // Setup the Add to Cart button
+        const addToCartButton = document.getElementById('add-to-cart-button');
+        addToCartButton.addEventListener('click', () => {
+          addtoshoppingcart(product.id, product.image.url, product.price, product.title);
+        });
+
+      } catch (error) {
+        console.error('Error fetching product data:', error);
       }
     });
+
+    // Function to add product to cart (needs to be global)
+    function addtoshoppingcart(id, imgUrl, price, title) {
+      const product = { id, imgUrl, price: parseFloat(price), title, quantity: 1 };
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Check if product is already in cart
+      const existingProductIndex = cart.findIndex(item => item.id === id);
+      if (existingProductIndex > -1) {
+        // If product exists, increase quantity
+        cart[existingProductIndex].quantity += 1;
+      } else {
+        // Otherwise add new product
+        cart.push(product);
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Update cart icon (assuming this function is defined in main.js)
+      if (window.updateCartIcon) {
+        window.updateCartIcon();
+      }
+
+      // Play notification sound (assuming this function is defined in main.js)
+      if (window.playNotificationSound) {
+        window.playNotificationSound();
+      }
+
+      alert('Product added to cart!');
+    }
   </script>
   <script src="src/js/main.js" type="module"></script>
   <script src="src/js/handleModal.js" type="module"></script>
