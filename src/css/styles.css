@@ -19,6 +19,12 @@ body {
   max-height: auto;
 }
 
+.card-container{
+  width: 100%;
+  max-width: 72rem;
+  margin: auto;
+}
+
 /*Linetext ourbestseller*/
 .text {
   background-color: #273F2E;
@@ -623,7 +629,7 @@ footer {
 /*js discount*/
 #product-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   width: 100%;
   margin: 0 auto;
@@ -655,7 +661,7 @@ footer {
 
 #femaleproduct {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   width: 100%;
   margin: 0 auto;
@@ -687,10 +693,10 @@ footer {
 
 #maleproduct {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 .male {
